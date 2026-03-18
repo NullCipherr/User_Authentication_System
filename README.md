@@ -131,7 +131,7 @@ O projeto aplica uma arquitetura organizada em camadas, separando responsabilida
 
 ## 📄 Licença
 
-Este projeto pode ser distribuído sob a licença que o time definir (ex.: MIT).
+Distribuído sob a licença MIT. Veja `LICENSE` para mais informações.
 
 ---
 
