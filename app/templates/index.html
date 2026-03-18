@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}Inicio | Sistema de Autenticacao{% endblock %}
+
+{% block content %}
+<section class="card">
+  <h2>Bem-vindo</h2>
+  <p>Aplicacao completa de autenticacao com Flask + SQLite.</p>
+  <div class="actions">
+    <a class="btn" href="{{ url_for('auth.register') }}">Criar conta</a>
+    <a class="btn btn-secondary" href="{{ url_for('auth.login') }}">Entrar</a>
+  </div>
+</section>
+{% endblock %}

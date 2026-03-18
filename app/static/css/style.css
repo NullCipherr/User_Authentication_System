@@ -1,0 +1,137 @@
+:root {
+  --bg: #f3f6fb;
+  --surface: #ffffff;
+  --text: #1d2433;
+  --primary: #0f62fe;
+  --primary-dark: #0043ce;
+  --error: #d32f2f;
+  --success: #2e7d32;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(180deg, #eef3ff 0%, var(--bg) 100%);
+  color: var(--text);
+}
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 24px;
+  background: var(--surface);
+  border-bottom: 1px solid #e3e8f2;
+}
+
+.site-header h1 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.site-header a {
+  text-decoration: none;
+  color: inherit;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.container {
+  max-width: 860px;
+  margin: 28px auto;
+  padding: 0 16px;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid #e3e8f2;
+  border-radius: 14px;
+  padding: 24px;
+  box-shadow: 0 8px 24px rgba(19, 40, 80, 0.08);
+}
+
+.form-grid {
+  display: grid;
+  gap: 12px;
+}
+
+label {
+  display: grid;
+  gap: 6px;
+  font-size: 0.95rem;
+}
+
+input {
+  padding: 10px 12px;
+  border: 1px solid #cfd8ea;
+  border-radius: 8px;
+}
+
+.actions {
+  margin-top: 16px;
+  display: flex;
+  gap: 12px;
+}
+
+.btn,
+button {
+  border: 0;
+  cursor: pointer;
+  border-radius: 8px;
+  padding: 10px 14px;
+  background: var(--primary);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.btn:hover,
+button:hover {
+  background: var(--primary-dark);
+}
+
+.btn-secondary {
+  background: #4b5563;
+}
+
+.inline-form {
+  margin: 0;
+}
+
+.flash {
+  padding: 10px 12px;
+  border-radius: 8px;
+  margin-bottom: 14px;
+}
+
+.flash-error {
+  background: #ffebee;
+  color: var(--error);
+  border: 1px solid #ffcdd2;
+}
+
+.flash-success {
+  background: #e8f5e9;
+  color: var(--success);
+  border: 1px solid #c8e6c9;
+}
+
+@media (max-width: 640px) {
+  .site-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav {
+    flex-wrap: wrap;
+  }
+}

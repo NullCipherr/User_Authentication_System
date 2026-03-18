@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}Sistema de Autenticacao{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <header class="site-header">
+    <h1><a href="{{ url_for('auth.index') }}">User Authentication System</a></h1>
+    <nav>
+      <a href="{{ url_for('auth.register') }}">Cadastro</a>
+      <a href="{{ url_for('auth.login') }}">Login</a>
+      {% if session.get('user_id') %}
+      <form method="post" action="{{ url_for('auth.logout') }}" class="inline-form">
+        <button type="submit">Logout</button>
+      </form>
+      {% endif %}
+    </nav>
+  </header>
+
+  <main class="container">
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        {% for category, message in messages %}
+          <div class="flash flash-{{ category }}">{{ message }}</div>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+
+    {% block content %}{% endblock %}
+  </main>
+</body>
+</html>

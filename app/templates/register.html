@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}Cadastro{% endblock %}
+
+{% block content %}
+<section class="card">
+  <h2>Criar conta</h2>
+  <form method="post" class="form-grid">
+    <label>Nome
+      <input type="text" name="name" required>
+    </label>
+    <label>CPF (11 digitos)
+      <input type="text" name="cpf" minlength="11" maxlength="11" required>
+    </label>
+    <label>Username
+      <input type="text" name="username" required>
+    </label>
+    <label>Senha
+      <input type="password" name="password" minlength="6" required>
+    </label>
+    <label>Repetir senha
+      <input type="password" name="repeat_password" minlength="6" required>
+    </label>
+    <button type="submit" class="btn">Cadastrar</button>
+  </form>
+</section>
+{% endblock %}
